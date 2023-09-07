@@ -1,0 +1,51 @@
+.card__item__img {
+  width: 100%;
+  height: 255px;
+  @include Mobile{
+    height: 210px;
+  }
+}
+
+.btn__left__sparkler {
+  height: 24px;
+  width: 24px;
+}
+
+.left__activity__link {
+  position: relative;
+
+  &:hover::before {
+    content: '';
+    top: 8px;
+    right: -10px;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: $secondary;
+    z-index: -1;
+  }
+}
+
+.right__activity__link {
+  position: relative;
+
+  &:hover::before {
+    content: '';
+    top: 8px;
+    left: -8px;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: $tertiary;
+    z-index: -1;
+  }
+}
+
+.modal-btn {
+  color: $secondary; 
+  &:hover {
+    color: $white;
+  }
+}

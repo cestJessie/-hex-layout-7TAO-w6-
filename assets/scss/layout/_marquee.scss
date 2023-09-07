@@ -1,0 +1,9 @@
+//跑馬燈均速效果
+.swiper-wrapper {
+  transition-timing-function: linear;
+}
+.swiper-slide {
+  letter-spacing: 3.2px;
+  width: auto;
+  white-space: nowrap;
+}

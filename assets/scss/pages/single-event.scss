@@ -1,0 +1,22 @@
+.time::before {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 2px;
+  left: 50%;
+  top:47%;
+  transform: translateX(-50%) rotate(120deg);
+  background-color: $primary;
+  @include Pad{
+      width: 50px;
+      top: 50%;
+  }
+}
+
+.single__event__content{
+  text-align: justify;
+}
+
+.ticket__area table > :not(caption) > * > *{
+  padding: 0;
+}

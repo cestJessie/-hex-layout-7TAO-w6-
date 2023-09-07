@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<%- include('./layout/head'); -%>
+
+  <body>
+    <div class="d-flex flex-column vh-100">
+      <!-- Header -->
+      <%- include('./layout/header'); -%>
+
+        <main class="container py-md-16 py-6 flex-grow-1">
+          <img src="../assets/images/sparkler.png" alt="sparkler-icon" class="d-block mx-auto login__title__icon mb-4">
+          <h2 class="login__title fw-bold fs-4 font-notoSerif mb-4 mx-auto text-center">
+            會員登入
+          </h2>
+          <form class="row justify-content-center needs-validation" novalidate>
+            <div class="col-md-4 font-notoSans">
+              <div class="mb-4">
+                <label for="account" class="form-label mb-2">帳號</label>
+                <input type="text" class="form-control fs-5 py-2 px-4 text-gray53 border border-2 border-primary w-100"
+                  id="account" placeholder="請輸入帳號" required>
+                <div class="invalid-feedback mt-0">
+                  請輸入帳號
+                </div>
+              </div>
+              <div class="mb-8 mb-md-6">
+                <label for="password" class="form-label  mb-2">密碼</label>
+                <input type="text" class="form-control fs-5 py-2 px-4 text-gray53 border border-2 border-primary w-100"
+                  id="password" placeholder="請輸入密碼" required>
+                <div class="invalid-feedback mt-0">
+                  請輸入密碼
+                </div>
+              </div>
+              <button class="btn btn-primary fs-md-5 fs-8 fw-bold w-100 py-4 py-md-2" type="submit">登入 <span
+                  class="ms-md-1 ms-2">&raquo;</span></button>
+            </div>
+          </form>
+        </main>
+
+
+        <!-- Footer -->
+        <%- include('./layout/footer'); -%>
+    </div>
+    <!-- JS IMPORT -->
+    <script type="module" src="../main.js"></script>
+    <!-- Import jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js"
+      integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+    <script>
+      $('.needs-validation').each(function (index) {
+        $(this).on('submit', function (e) {
+          e.preventDefault();
+          $(this).addClass('was-validated');
+        });
+      });
+    </script>
+  </body>
+
+</html>

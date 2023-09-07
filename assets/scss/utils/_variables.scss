@@ -311,7 +311,7 @@ $gray31:        #4f4f4f !default; // J
 $gray53:        #878787 !default; // J
 $alabaster:     #f3f1e5 !default; // J
 $hoverGreen:    #9C9E18 !default; // J
-
+$singleEvent-bg:#EBEAE8 !default; // J
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
@@ -328,7 +328,9 @@ $theme-colors: (
   "gray31":     $gray31, // J
   "gray53":     $gray53, // J
   "alabaster":  $alabaster, // J
-  "hoverGreen": $hoverGreen // J
+  "hoverGreen": $hoverGreen, // J
+  "singleEvent-bg":  $singleEvent-bg //J
+  
 ) !default;
 // scss-docs-end theme-colors-map
 
@@ -379,7 +381,7 @@ $escaped-characters: (
 // Quickly modify global styling by enabling or disabling optional features.
 
 $enable-caret:                true !default;
-$enable-rounded:              true !default;
+$enable-rounded:              false !default;//true !default;
 $enable-shadows:              false !default;
 $enable-gradients:            false !default;
 $enable-transitions:          true !default;
@@ -444,6 +446,10 @@ $spacers: (
   21: $spacer *5, //80px
   35: calc(($spacer * 2) + 3px),//35px
   38: calc(($spacer * 2) + 6px),//38px
+  58: calc(($spacer * 3) + 10px),//58px
+  50: calc(($spacer * 3) + 2px),//50px
+  104: $spacer *6.5, //104px
+
 ) !default;
 // scss-docs-end spacer-variables-maps
 
@@ -464,8 +470,8 @@ $position-values: (
 // Settings for the `<body>` element.
 
 $body-text-align:           null !default;
-$body-color:                $gray-900 !default;
-$body-bg:                   $white !default;
+$body-color:                #030303 !default;//$gray-900 !default; J
+$body-bg:                   #f3f1e5 !default;//$white !default; J
 
 $body-secondary-color:      rgba($body-color, .75) !default;
 $body-secondary-bg:         $gray-200 !default;
@@ -480,7 +486,7 @@ $body-emphasis-color:       $black !default;
 // Style anchor elements.
 
 $link-color:                              $primary !default;
-$link-decoration:                         underline !default;
+$link-decoration:                         none !default;//underline !default; j
 $link-shade-percentage:                   20% !default;
 $link-hover-color:                        shift-color($link-color, $link-shade-percentage) !default;
 $link-hover-decoration:                   null !default;
@@ -501,7 +507,7 @@ $icon-link-icon-transform:    translate3d(.25em, 0, 0) !default;
 //
 // Style p element.
 
-$paragraph-margin-bottom:   1rem !default;
+$paragraph-margin-bottom:   0 !default;//1rem !default; j
 
 
 // Grid breakpoints
@@ -632,9 +638,9 @@ $aspect-ratios: (
 
 // scss-docs-start font-variables
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:       system-ui, -apple-system, "Segoe UI", Roboto,
+$font-family-sans-serif:"Yeseva One", "Noto Sans TC", "Noto Serif TC",system-ui, -apple-system, "Segoe UI", Roboto,
 "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif,
-"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default; //j
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 // stylelint-enable value-keyword-case
 $font-family-base:            var(--#{$prefix}font-sans-serif) !default;
@@ -682,11 +688,12 @@ $font-sizes: (
   9: $font-size-base * 3.75,// J 60px
   10: $font-size-base * 3,// J 48px
   11: $font-size-base * 4,// J 64px
+  22: $font-size-base * 1.375// J 22px
 ) !default;
 // scss-docs-end font-sizes
 
 // scss-docs-start headings-variables
-$headings-margin-bottom:      $spacer * .5 !default;
+$headings-margin-bottom:      0 !default;//$spacer * .5 !default; j
 $headings-font-family:        null !default;
 $headings-font-style:         null !default;
 $headings-font-weight:        500 !default;
@@ -1334,23 +1341,23 @@ $pagination-padding-x-lg:           1.5rem !default;
 
 $pagination-font-size:              $font-size-base !default;
 
-$pagination-color:                  var(--#{$prefix}link-color) !default;
+$pagination-color:                  $primary;//var(--#{$prefix}link-color) !default;
 $pagination-bg:                     var(--#{$prefix}body-bg) !default;
 $pagination-border-radius:          var(--#{$prefix}border-radius) !default;
 $pagination-border-width:           var(--#{$prefix}border-width) !default;
 $pagination-margin-start:           calc(#{$pagination-border-width} * -1) !default; // stylelint-disable-line function-disallowed-list
-$pagination-border-color:           var(--#{$prefix}border-color) !default;
+$pagination-border-color:           $primary; //var(--#{$prefix}border-color) !default;
 
-$pagination-focus-color:            var(--#{$prefix}link-hover-color) !default;
-$pagination-focus-bg:               var(--#{$prefix}secondary-bg) !default;
-$pagination-focus-box-shadow:       $focus-ring-box-shadow !default;
-$pagination-focus-outline:          0 !default;
+$pagination-focus-color:            $secondary;//var(--#{$prefix}link-hover-color) !default; // j
+$pagination-focus-bg:               $primary;//var(--#{$prefix}secondary-bg) !default;
+$pagination-focus-box-shadow:       $alabaster;//$focus-ring-box-shadow !default;
+$pagination-focus-outline:          $primary;//0 !default;
 
-$pagination-hover-color:            var(--#{$prefix}link-hover-color) !default;
-$pagination-hover-bg:               var(--#{$prefix}tertiary-bg) !default;
-$pagination-hover-border-color:     var(--#{$prefix}border-color) !default; // Todo in v6: remove this?
+$pagination-hover-color:            $secondary;//var(--#{$prefix}link-hover-color) !default;
+$pagination-hover-bg:               $primary;//var(--#{$prefix}tertiary-bg) !default;
+$pagination-hover-border-color:     $primary;//var(--#{$prefix}border-color) !default; // Todo in v6: remove this?
 
-$pagination-active-color:           $component-active-color !default;
+$pagination-active-color:           $secondary;  //$component-active-color !default;
 $pagination-active-bg:              $component-active-bg !default;
 $pagination-active-border-color:    $component-active-bg !default;
 
@@ -1741,7 +1748,7 @@ $btn-close-padding-x:        .25em !default;
 $btn-close-padding-y:        $btn-close-padding-x !default;
 $btn-close-color:            $black !default;
 $btn-close-bg:               url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$btn-close-color}'><path d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/></svg>") !default;
-$btn-close-focus-shadow:     $focus-ring-box-shadow !default;
+$btn-close-focus-shadow:     none !default;//$focus-ring-box-shadow !default; //J
 $btn-close-opacity:          .5 !default;
 $btn-close-hover-opacity:    .75 !default;
 $btn-close-focus-opacity:    1 !default;

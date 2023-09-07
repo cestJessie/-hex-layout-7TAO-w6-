@@ -1,26 +1,256 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
+<%- include('./layout/head'); -%>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>7TAO</title>
-  <link rel="stylesheet" href="../assets/icofont/icofont.min.css">
+  <body>
+    <!-- Header -->
+    <%- include('./layout/header'); -%>
 
-</head>
+      <!-- Banner -->
+      <main class="pt-md-8 pt-4">
+        <div class="container">
+          <div
+            class="banner__area p-md-12 pb-md-6 py-4 px-10 pb-6 d-flex flex-column justify-content-between mb-md-12 mb-8 text-white">
+            <p class="fs-md-9 fs-2">19 MAY <br class="d-md-none d-block">2023</p>
+            <div class="text-center">
+              <h3 class="font-notoSerif fw-bold fs-md-4 fs-8 mb-md-4">隔牆有耳-沒有草東的派對</h3>
+              <p class="font-notoSans d-md-block d-none">你各位聽團仔們！每次想跟朋友一起聽草東專場卻每一次都搶不到票？「草東沒有派對」永遠都是「草東沒有門票」！<br>
+                帶上啤酒、野餐墊，讓我們在Live House外面一起開場「沒有草東的派對」吧！</p>
+            </div>
+          </div>
 
-<body class="bg-alabaster">
-  <%- include('./layout/header'); -%>
+          <!-- Catalog -->
+          <div class="catalog__area row gx-md-6 mb-md-12 gx-2 mb-8">
+            <div class="col-lg-2 col-md-4 col-4 mb-2">
+              <div class="border border-2 border-primary text-center">
+                <a href="#" class="d-block py-md-9 py-5 text__animate">
+                  <img src="../assets/images/cate01.svg" alt="表演活動">
+                  <p class="fs-md-4 font-notoSerif fw-bold">演出</p>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-4 mb-2">
+              <div class="border border-2 border-primary text-center">
+                <a href="#" class="d-block py-md-9 py-5 text__animate">
+                  <img src="../assets/images/cate02.svg" alt="聯誼活動">
+                  <p class="fs-md-4 font-notoSerif fw-bold">聯誼</p>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-4 mb-2">
+              <div class="border border-2 border-primary text-center">
+                <a href="#" class="d-block py-md-9 py-5 text__animate">
+                  <img src="../assets/images/cate03.svg" alt="展覽活動">
+                  <p class="fs-md-4 font-notoSerif fw-bold">展覽</p>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-4 mb-2">
+              <div class="border border-2 border-primary text-center">
+                <a href="#" class="d-block py-md-9 py-5 text__animate">
+                  <img src="../assets/images/cate04.svg" alt="美食活動">
+                  <p class="fs-md-4 font-notoSerif fw-bold">美食</p>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-4 mb-2">
+              <div class="border border-2 border-primary text-center">
+                <a href="#" class="d-block py-md-9 py-5 text__animate">
+                  <img src="../assets/images/cate05.svg" alt="戶外活動">
+                  <p class="fs-md-4 font-notoSerif fw-bold">戶外</p>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-4 mb-2">
+              <a href="explore-more-events.html"
+                class="d-flex align-items-center justify-content-center bg-primary text-secondary h-100">
+                <p class="fs-md-10 fs-4 font-notoSerif fw-bold text__animate">探索<br>更多</p>
+              </a>
+            </div>
+          </div>
 
+          <!-- Recent Events-->
+          <%- include('./layout/recent-events'); -%>
 
+            <!-- Online -->
+            <div class="online__area row mb-md-16 mb-8">
+              <div class="online__title col-12  mb-md-8 mb-6">
+                <div
+                  class="border border-2 border-primary d-flex justify-content-between align-items-center py-md-6 px-md-8 py-4 px-3">
+                  <p class="fs-md-11 fs-4 ">ONLINE</p>
+                  <p class="fs-md-2 fs-6 fw-bold font-notoSerif">線上活動</p>
+                </div>
+              </div>
+              <div class="online__content__area">
+                <div class="row d-flex">
+                  <div class=" col-md-7 col-12 mb-md-0 mb-3">
+                    <div class="online__item__img flex-grow-1"></div>
+                  </div>
+                  <div class="col-md-5 col-12">
+                    <h4 class="fs-md-2 fs-8 fw-bold font- font-notoSerif mb-md-4 mb-2">切特居批踢</h4>
+                    <ul class="online__list__link list-unstyled d-flex mb-md-8 mb-3">
+                      <li class="me-2">
+                        <a href="#"
+                          class="font-notoSerif py-1 px-md-6 px-4 fs-md-6 fs-7 fw-bold tag__link d-flex align-items-center">競賽</a>
+                      </li>
+                      <li class="me-2">
+                        <a href="#"
+                          class="font-notoSerif py-1 px-md-6 px-4 fs-md-6 fs-7 fw-bold tag__link d-flex align-items-center">
+                          科技</a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          class="font-notoSerif py-1 px-md-6 px-4 fs-md-6 fs-7 fw-bold tag__link d-flex align-items-center">
+                          有趣</a>
+                      </li>
+                    </ul>
+                    <p class="font-notoSans mb-3 mb-md-8 ">
+                      最近網路上很流行的AI程式
+                      ChatGPT，可以用來聊天或是查詢、整理各種資料，不同的應用方式如雨後春筍般冒出來。<br />
+                      這個活動讓大家把自己最有特色的使用方法提出來讓大家參考，也會投票出最有趣的用法。<br />
+                      該讓其他人知道自己使用 ChatGPT 的姿勢才是最特別的那個了！
+                    </p>
+                    <a href="#"
+                      class="btn btn-primary w-100 text-center font-notoSans py-md-2 py-4 fs-md-5 fs-6 fw-bold online__link__hover">查看活動詳情<span
+                        class="fs-md-5 fs-6 ms-1">&raquo;</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        </div>
 
+        <!-- Marquee -->
+        <%- include('./layout/marquee'); -%>
 
+          <!-- Albums -->
+          <div class="container py-md-16 py-11 font-notoSerif">
+            <ul class="albums__list list-unstyled row gy-10 mb-0 justify-content-center">
+              <a href="#" class="col-lg-3 col-md-6 col-10">
+                <li class="d-flex flex-column h-100">
+                  <div class="albums__item border border-2 border-primary position-relative p-md-4 p-3 flex-grow-1">
+                    <h5 class="position-absolute top-0 start-50 fs-6 fw-bold bg-white px-3 py-2  h5__transform">社群活動
+                    </h5>
+                    <img class="albums__img img-fluid w-100 img__hover" src="../assets/images/album/01.jpg" alt="社群活動">
+                    <p class="mb-md-8 mb-5 fw-bold fs-8 pt-md-4 pt-3">無聲派對-閉閉嘴dancing</p>
+                  </div>
+                </li>
+              </a>
+              <a href="#" class="col-lg-3 col-md-6 col-10">
+                <li class="d-flex flex-column h-100">
+                  <div class="albums__item border border-2 border-primary position-relative p-md-4 p-3 flex-grow-1">
+                    <h5 class="position-absolute top-0 start-50 fs-6 fw-bold bg-white px-3 py-2  h5__transform">藝文活動
+                    </h5>
+                    <img class="albums__img img-fluid w-100 img__hover" src="../assets/images/album/02.jpg" alt="藝文活動">
+                    <p class="mb-md-8 mb-5 fw-bold fs-8 pt-md-4 pt-3">拯救老店大作戰</p>
+                  </div>
+                </li>
+              </a>
+              <a href="#" class="col-lg-3 col-md-6 col-10">
+                <li class="d-flex flex-column h-100">
+                  <div class="albums__item border border-2 border-primary position-relative p-md-4 p-3 flex-grow-1">
+                    <h5
+                      class="position-absolute top-0 start-50 translate-middle fs-6 fw-bold bg-white px-3 py-2  h5__transform">
+                      自我覺察</h5>
+                    <img class="albums__img img-fluid w-100 img__hover" src="../assets/images/album/03.jpg" alt="自我覺察">
+                    <p class="mb-md-8 mb-5 fw-bold fs-8 pt-md-4 pt-3">內觀修行-部落篇</p>
+                  </div>
+                </li>
+              </a>
+              <a href="#" class="col-lg-3 col-md-6 col-10">
+                <li class="d-flex flex-column h-100">
+                  <div class="albums__item border border-2 border-primary position-relative p-md-4 p-3 flex-grow-1">
+                    <h5 class="position-absolute top-0 start-50 fs-6 fw-bold bg-white px-3 py-2  h5__transform">聯誼活動
+                    </h5>
+                    <img class="albums__img img-fluid w-100 img__hover" src="../assets/images/album/04.jpg" alt="聯誼活動">
+                    <p class="mb-md-8 mb-5 fw-bold fs-8 pt-md-4 pt-3">賞櫻野餐</p>
+                  </div>
+                </li>
+              </a>
+            </ul>
+          </div>
 
+          <!-- Marquee -->
+          <%- include('./layout/marquee'); -%>
 
+            <!-- Follow & Subscribe -->
+            <div class="container py-md-16 pt-8 pb-12">
+              <div class="row flex-md-row flex-column gy-md-0 gy-6">
+                <div class="col pe-md-0">
+                  <h2
+                    class="py-4 ps-md-8 ps-3 fs-md-2 fs-4 fw-bold font-notoSerif border border-2 border-primary border-bottom-0">
+                    #FOLLOW US</h2>
 
-  <%- include('./layout/footer'); -%>
-    <script type="module" src="../main.js"></script>
-</body>
+                  <div class="p-md-8 py-4 px-3 font-notoSans border border-primary border-2 ">
+                    <p class="mb-md-8 mb-4">想第一時間獲得新奇有趣的活動資訊？<br>
+                      追蹤我們的社群吧！<br>
+                      也歡迎你聯繫我們，提供好玩有趣的活動企劃。
+                    </p>
+                    <ul class="list-unstyled mb-0">
+                      <li class="mb-4">
+                        <a href="mailto:7tao.event@gmail.com" class="link__hover d-flex align-items-center"><i
+                            class="icofont-ui-email bg-primary text-white p-2 fs-6 me-4"></i>7tao.event@gmail.com</a>
+                      </li>
+                      <li class="mb-4">
+                        <a href="tel:09123123123" class="link__hover d-flex align-items-center"><i
+                            class="icofont-phone bg-primary text-white p-2 fs-6 me-4"></i>09123123123</a>
+                      </li>
+                      <li>
+                        <a href="#" class="link__hover d-flex align-items-center"><i
+                            class="icofont-facebook bg-primary text-white p-2 fs-6 me-4"></i>7TAO七逃</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="col ps-md-0 d-flex flex-column">
+                  <h2
+                    class="py-4 ps-md-8 ps-3 fs-md-2 fs-4 fw-bold font-notoSerif custom__border border-2 border-primary border-bottom-0">
+                    #SUBSCRIBE US</h2>
+                  <div class="p-md-8 py-4 px-3 font-notoSans border-primary border-2 custom__border flex-grow-1">
+                    <p class="mb-md-8 mb-4">訂閱電子報送折價券！<br>
+                      定期精選文章資訊及最新優惠資訊，<br>
+                      還不通通給我訂閱起來？
+                    </p>
+                    <input type="email" placeholder="輸入Email"
+                      class="text-gray31 border border-primary border-2 py-4 ps-6 bg-transparent w-100"
+                      id="subscribe-mail" name="subscribe-mail" aria-label="輸入Email" required>
+                  </div>
+                  <button
+                    class="btn btn-primary subscribe-btn w-100 mt-auto fw-bold fs-md-5 fs-6 align-items-center font-notoSans py-md-2 py-4">
+                    確認訂閱<span class="ms-1">&raquo;</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slogan -->
+            <div class="py-md-16 py-12 border-top border-3 border-primary font-notoSerif text-center fw-bold">
+              <p class="fs-md-2 fs-8 mb-md-4 mb-3">此刻打盹，你將做夢；此刻學習，你將圓夢</p>
+              <p class="fs-md-8 fs-7">——我也不知道誰說的</p>
+            </div>
+      </main>
+
+      <!-- Footer -->
+      <%- include('./layout/footer'); -%>
+
+        <!-- JS IMPORT -->
+        <script type="module" src="../main.js"></script>
+        <!-- Marquee swiper -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        <script>
+          const swiper = new Swiper(".mySwiper", {
+            allowTouchMove: false,
+            slidesPerView: "auto",
+            speed: 50000,
+            loop: true,
+            autoplay: {
+              delay: 0,
+              disableOnInteraction: false
+            }
+          });
+        </script>
+
+  </body>
 
 </html>

@@ -1,0 +1,81 @@
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,//4px
+  2: $spacer * .5,//8px
+  3: $spacer * .75,//12px
+  4: $spacer,//16px
+  5: $spacer * 1.25,//20px
+  6: $spacer * 1.5,//24px
+  7: $spacer * 1.75,//28px
+  8: $spacer * 2,//32px
+  9: $spacer * 2.25,//36px
+  10: $spacer * 2.5,//40px
+  11: $spacer * 2.75, //44px
+  12: $spacer * 3, //48px
+  13: $spacer * 3.25, //52px
+  14: $spacer * 3.375, //54px
+  15: $spacer * 3.5, //56px
+  16: $spacer * 3.75,//60px
+  17: $spacer * 4,//64px
+  18: $spacer *4.25, //68px
+  19: $spacer *4.5, //72px
+  20: $spacer *4.75, //76px
+  21: $spacer *5, //80px
+  35: calc(($spacer * 2) + 3px),//35px
+  38: calc(($spacer * 2) + 6px),//38px
+  58: calc(($spacer * 3) + 10px),//58px
+  50: calc(($spacer * 3) + 2px),//50px
+  104: $spacer *6.5, //104px
+) !default;
+
+$font-sizes: (
+  1: $h1-font-size, //40px
+  2: $h2-font-size, //32px
+  3: $h3-font-size, //28px
+  4: $h4-font-size, //24px
+  5: $h5-font-size, //20px
+  6: $h6-font-size, //16px
+  7: $font-size-base * .875, // J 14px
+  8: $font-size-base * 1.125,// J 18px
+  9: $font-size-base * 3.75,// J 60px
+  10: $font-size-base * 3,// J 48px
+  11: $font-size-base * 4,// J 64px
+  22: $font-size-base * 1.375// J 22px
+) !default;
+
+// scss-docs-start theme-color-variables
+$primary:       #030303!default;//$blue !default;
+$secondary:     #FBFF22!default;//J $gray-600 !default;
+$tertiary:      #C96464!default; // J
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-100 !default;
+$dark:          $gray-900 !default;
+$gray31:        #4f4f4f !default; // J
+$gray53:        #878787 !default; // J
+$alabaster:     #f3f1e5 !default; // J
+$hoverGreen:    #9C9E18 !default; // J
+$singleEvent-bg:    #EBEAE8 !default; // J
+
+// scss-docs-end theme-color-variables
+
+// scss-docs-start theme-colors-map
+$theme-colors: (
+  "primary":    $primary, // J
+  "secondary":  $secondary, // J
+  "tertiary":   $tertiary, // J
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark,
+  "gray31":     $gray31, // J
+  "gray53":     $gray53, // J
+  "alabaster":  $alabaster, // J
+  "hoverGreen": $hoverGreen, // J
+  "singleEvent-bg": $singleEvent-bg //j
+) !default;

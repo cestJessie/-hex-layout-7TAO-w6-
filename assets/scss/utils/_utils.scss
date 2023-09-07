@@ -1,11 +1,10 @@
-.tag__link {
-  border-top: 1px solid $primary;
-  border-bottom: 1px solid $primary;
-  border-right: 1px solid $primary;
-  border-left: 4px solid $primary;
-
+.link__hover {
   &:hover {
-    border-left: 4px solid $hoverGreen;
     color: $hoverGreen;
   }
 }
+
+.img__hover:hover{
+  opacity: 0.8;
+}
+

@@ -1,0 +1,112 @@
+// Banner 
+.banner__area {
+  height: 350px;
+  background-image: url(../images/event/13.jpg);
+  @include bg-img-cover;
+
+  @include media-breakpoint-up(md) {
+    height: 518px;
+  }
+}
+
+// Events
+.catalog__area {
+  img {
+    width: 80px;
+    height: 80px;
+
+    @include Pad {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+// catalog 文字跳動效果
+@keyframes pulse {
+  from {
+    transform: scale(0.8);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+.text__animate {
+  &:hover {
+    animation: pulse 1s infinite ease-in-out alternate;
+  }
+}
+
+// ONLINE
+.online {
+  &__item__img {
+    background-image: url(../images/event/online.jpg);
+    background-position: 10% 32.5%;
+    background-size: cover;
+    height: 158px;
+
+    @include media-breakpoint-up(md) {
+      height: 100%;
+    }
+  }
+}
+
+.tag__link {
+  border-top: 1px solid $primary;
+  border-bottom: 1px solid $primary;
+  border-right: 1px solid $primary;
+  border-left: 4px solid $primary;
+
+  &:hover {
+    border-left: 4px solid $secondary;
+    color: $white;
+    background: $primary;
+  }
+}
+
+
+.custom__border {
+  border-top: 2px solid $primary;
+  border-right: 2px solid $primary;
+  border-bottom: 2px solid $primary;
+  border-left: 0;
+
+  @include Pad {
+    border-left: 2px solid $primary;
+  }
+}
+
+.online__link__hover:hover {
+  color: $secondary;
+}
+
+// Albums
+.albums__list a {
+  &:nth-child(2n) {
+    transform: rotate(2deg);
+  }
+
+  &:nth-child(3) {
+    transform: rotate(-2deg);
+  }
+}
+
+.albums__img {
+  object-fit: cover;
+  height: 274px;
+}
+
+.h5__transform {
+  transform: translate(-50%, -50%) rotate(-4deg);
+}
+
+// Follow & Subscribe
+.subscribe-btn {
+  color: $white;
+
+  &:hover {
+    color: $secondary;
+  }
+}
